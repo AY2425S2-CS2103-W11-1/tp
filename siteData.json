@@ -11,7 +11,7 @@
         "jane-doe": "Jane Doe",
         "chen-xinpeng": "Chen Xinpeng",
         "jean-doe": "Jean Doe",
-        "james-doe": "James Doe"
+        "zhang-leran": "Zhang Leran"
       },
       "headingKeywords": {}
     },
@@ -136,16 +136,16 @@
       "headingKeywords": {}
     },
     {
-      "src": "team/johndoe.md",
-      "title": "John Doe's Project Portfolio Page",
+      "src": "team/xinpeng.md",
+      "title": "Xinpeng's Project Portfolio Page",
       "headings": {
-        "project-addressbook-level-3": "Project: AddressBook Level 3"
+        "project-mentorstack": "Project: Mentorstack"
       },
       "headingKeywords": {}
     },
     {
-      "src": "team/xinpeng.md",
-      "title": "Xinpeng's Project Portfolio Page",
+      "src": "team/zlllllr.md",
+      "title": "Zhang Leran's Project Portfolio Page",
       "headings": {
         "project-mentorstack": "Project: Mentorstack"
       },
