@@ -10,7 +10,7 @@
         "john-doe": "John Doe",
         "jane-doe": "Jane Doe",
         "chen-xinpeng": "Chen Xinpeng",
-        "jean-doe": "Jean Doe",
+        "she-yuting": "She Yuting",
         "zhang-leran": "Zhang Leran"
       },
       "headingKeywords": {}
@@ -132,6 +132,14 @@
       "title": "",
       "headings": {
         "addressbook-level-3": "AddressBook Level-3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/sheyuting.md",
+      "title": "She Yuting's Project Portfolio Page",
+      "headings": {
+        "project-mentorstack": "Project: Mentorstack"
       },
       "headingKeywords": {}
     },
