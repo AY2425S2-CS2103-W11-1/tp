@@ -7,9 +7,8 @@
       "headings": {
         "about-us": "About Us",
         "project-team": "Project team",
-        "john-doe": "John Doe",
-        "jane-doe": "Jane Doe",
         "chen-xinpeng": "Chen Xinpeng",
+        "ng-jia-quan": "Ng Jia Quan",
         "she-yuting": "She Yuting",
         "zhang-leran": "Zhang Leran"
       },
@@ -132,6 +131,14 @@
       "title": "",
       "headings": {
         "addressbook-level-3": "AddressBook Level-3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/quantin96.md",
+      "title": "Ng Jia Quan's Project Portfolio Page",
+      "headings": {
+        "project-mentorstack": "Project: Mentorstack"
       },
       "headingKeywords": {}
     },
