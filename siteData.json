@@ -10,7 +10,8 @@
         "chen-xinpeng": "Chen Xinpeng",
         "ng-jia-quan": "Ng Jia Quan",
         "she-yuting": "She Yuting",
-        "zhang-leran": "Zhang Leran"
+        "zhang-leran": "Zhang Leran",
+        "willie-tay": "Willie Tay"
       },
       "headingKeywords": {}
     },
@@ -135,6 +136,14 @@
       "headingKeywords": {}
     },
     {
+      "src": "team/ioubread.md",
+      "title": "Willie Tay's Project Portfolio Page",
+      "headings": {
+        "project-mentorstack": "Project: Mentorstack"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "team/quantin96.md",
       "title": "Ng Jia Quan's Project Portfolio Page",
       "headings": {
@@ -153,6 +162,14 @@
     {
       "src": "team/subiloble.md",
       "title": "Xinpeng's Project Portfolio Page",
+      "headings": {
+        "project-mentorstack": "Project: Mentorstack"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/willie.md",
+      "title": "Willie Tay's Project Portfolio Page",
       "headings": {
         "project-mentorstack": "Project: Mentorstack"
       },
