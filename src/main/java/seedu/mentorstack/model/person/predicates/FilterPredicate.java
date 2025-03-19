@@ -8,8 +8,9 @@ import seedu.mentorstack.model.person.Person;
  * Generates filter predicates for student search.
  */
 public class FilterPredicate {
+
     /**
-     * Filter predicates for student search.
+     * Creates a filter predicate for student search.
      */
     public static Predicate<Person> createPredicate(String filterType, String filterValue) {
         switch (filterType) {

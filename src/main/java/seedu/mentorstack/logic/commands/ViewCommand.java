@@ -6,11 +6,12 @@ import static seedu.mentorstack.logic.parser.CliSyntax.PREFIX_FILTER_VALUE;
 import java.util.List;
 import java.util.function.Predicate;
 
+import seedu.mentorstack.commons.util.ToStringBuilder;
 import seedu.mentorstack.model.Model;
 import seedu.mentorstack.model.person.Person;
 
 /**
- * Finds and lists all persons in according to the filter.
+ * Finds and lists all persons in Mentorstack according to the filter.
  * Keyword matching is case insensitive.
  */
 public class ViewCommand extends Command {
@@ -24,7 +25,7 @@ public class ViewCommand extends Command {
     public static final String MESSAGE_NO_MATCH = "No students match the given criteria.";
     public static final String MESSAGE_INVALID_FILTER = "Invalid filter type or value.";
 
-    private final Predicate<Person> predicate;
+    public final Predicate<Person> predicate;
 
     public ViewCommand(Predicate<Person> predicate) {
         this.predicate = predicate;
@@ -33,22 +34,23 @@ public class ViewCommand extends Command {
     @Override
     public CommandResult execute(Model model) {
         model.updateFilteredPersonList(predicate);
-        List<Person> filteredStudents = model.getFilteredPersonList()
+        List<String> filteredStudents = model.getFilteredPersonList()
                 .stream()
                 .filter(predicate)
+                .map(person -> person.getName().fullName) // Extract only the name
                 .toList();
 
         if (filteredStudents.isEmpty()) {
             return new CommandResult(MESSAGE_NO_MATCH);
         }
 
-        String formattedList = formatStudentList(filteredStudents);
-        return new CommandResult(String.format(MESSAGE_SUCCESS, formattedList));
+        // String formattedList = formatStudentList(filteredStudents);
+        return new CommandResult(String.format(MESSAGE_SUCCESS, filteredStudents));
     }
 
     private String formatStudentList(List<Person> students) {
         StringBuilder sb = new StringBuilder();
-        sb.append(String.format("%-20s %-12s %-25s %s\n", "Name", "Phone", "Email", "Subjects"));
+        sb.append(String.format("%-20s %-12s %-25s %s\n", "Name", "Phone", "Email", "Subject"));
         sb.append("=".repeat(100)).append("\n");
 
         for (Person student : students) {
@@ -75,5 +77,12 @@ public class ViewCommand extends Command {
 
         ViewCommand otherViewCommand = (ViewCommand) other;
         return predicate.equals(otherViewCommand.predicate);
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .add("predicate", predicate)
+                .toString();
     }
 }
