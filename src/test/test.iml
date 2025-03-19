@@ -8,5 +8,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="main" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.4.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.openjfx:javafx-graphics:mac:17.0.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.openjfx:javafx-base:win:17.0.7" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.openjfx:javafx-fxml:linux:17.0.7" level="project" />
   </component>
 </module>

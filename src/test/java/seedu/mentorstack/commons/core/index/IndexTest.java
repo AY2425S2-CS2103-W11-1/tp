@@ -2,8 +2,11 @@ package seedu.mentorstack.commons.core.index;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static seedu.mentorstack.testutil.Assert.assertThrows;
+
+import java.util.HashSet;
+import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
@@ -63,5 +66,24 @@ public class IndexTest {
         Index index = Index.fromZeroBased(0);
         String expected = Index.class.getCanonicalName() + "{zeroBasedIndex=" + index.getZeroBased() + "}";
         assertEquals(expected, index.toString());
+    }
+
+    @Test
+    public void createIndexSet() {
+        Set<Index> indexSet = new HashSet<>();
+        indexSet.add(Index.fromOneBased(1));
+        indexSet.add(Index.fromOneBased(2));
+        indexSet.add(Index.fromOneBased(3));
+
+        assertTrue(indexSet.contains(Index.fromOneBased(1)));
+        assertTrue(indexSet.contains(Index.fromOneBased(2)));
+        assertTrue(indexSet.contains(Index.fromOneBased(3)));
+        assertFalse(indexSet.contains(Index.fromOneBased(4)));
+    }
+
+    @Test
+    public void parseIndexes_invalidIndex_throwsException() {
+        assertThrows(NumberFormatException.class, () -> Index.fromOneBased(Integer.parseInt("invalid")));
+        assertThrows(IndexOutOfBoundsException.class, () -> Index.fromOneBased(0));
     }
 }
