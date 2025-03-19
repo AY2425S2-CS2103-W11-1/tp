@@ -48,7 +48,7 @@ public class DeleteCommandTest {
     @Test
     public void execute_invalidIndexUnfilteredList_throwsCommandException() {
         Index outOfBoundIndex = Index.fromOneBased(model.getFilteredPersonList().size() + 1);
-        DeleteCommand deleteCommand = new DeleteCommand((Set<Index>) outOfBoundIndex);
+        DeleteCommand deleteCommand = new DeleteCommand(Set.of(outOfBoundIndex));
 
         assertCommandFailure(deleteCommand, model, Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
     }
@@ -78,7 +78,7 @@ public class DeleteCommandTest {
         // ensures that outOfBoundIndex is still in bounds of address book list
         assertTrue(outOfBoundIndex.getZeroBased() < model.getMentorstack().getPersonList().size());
 
-        DeleteCommand deleteCommand = new DeleteCommand((Set<Index>) outOfBoundIndex);
+        DeleteCommand deleteCommand = new DeleteCommand(Set.of(outOfBoundIndex));
 
         assertCommandFailure(deleteCommand, model, Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);
     }
@@ -108,7 +108,7 @@ public class DeleteCommandTest {
     @Test
     public void toStringMethod() {
         Index targetIndex = Index.fromOneBased(1);
-        DeleteCommand deleteCommand = new DeleteCommand((Set<Index>) targetIndex);
+        DeleteCommand deleteCommand = new DeleteCommand(Set.of(targetIndex));
         String expected = DeleteCommand.class.getCanonicalName() + "{targetIndex=" + targetIndex + "}";
         assertEquals(expected, deleteCommand.toString());
     }
