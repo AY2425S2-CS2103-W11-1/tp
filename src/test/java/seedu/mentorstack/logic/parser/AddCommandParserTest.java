@@ -33,7 +33,6 @@ import org.junit.jupiter.api.Test;
 
 import seedu.mentorstack.logic.Messages;
 import seedu.mentorstack.logic.commands.AddCommand;
-import seedu.mentorstack.model.person.Address;
 import seedu.mentorstack.model.person.Email;
 import seedu.mentorstack.model.person.Name;
 import seedu.mentorstack.model.person.Person;
@@ -137,10 +136,6 @@ public class AddCommandParserTest {
         assertParseFailure(parser, NAME_DESC_BOB + PHONE_DESC_BOB + VALID_EMAIL_BOB,
                 expectedMessage);
 
-        // missing address prefix
-        assertParseFailure(parser, NAME_DESC_BOB + PHONE_DESC_BOB + EMAIL_DESC_BOB,
-                expectedMessage);
-
         // all prefixes missing
         assertParseFailure(parser, VALID_NAME_BOB + VALID_PHONE_BOB + VALID_EMAIL_BOB,
                 expectedMessage);
@@ -159,10 +154,6 @@ public class AddCommandParserTest {
         // invalid email
         assertParseFailure(parser, NAME_DESC_BOB + PHONE_DESC_BOB + INVALID_EMAIL_DESC
                 + TAG_DESC_HUSBAND + TAG_DESC_FRIEND, Email.MESSAGE_CONSTRAINTS);
-
-        // invalid address
-        assertParseFailure(parser, NAME_DESC_BOB + PHONE_DESC_BOB + EMAIL_DESC_BOB
-                + TAG_DESC_HUSBAND + TAG_DESC_FRIEND, Address.MESSAGE_CONSTRAINTS);
 
         // invalid tag
         assertParseFailure(parser, NAME_DESC_BOB + PHONE_DESC_BOB + EMAIL_DESC_BOB
