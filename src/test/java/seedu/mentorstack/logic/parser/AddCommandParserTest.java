@@ -116,7 +116,7 @@ public class AddCommandParserTest {
     public void parse_optionalFieldsMissing_success() {
         // zero tags
         Person expectedPerson = new PersonBuilder(AMY).withTags().build();
-        assertParseSuccess(parser, NAME_DESC_AMY + PHONE_DESC_AMY + EMAIL_DESC_AMY,
+        assertParseSuccess(parser, NAME_DESC_AMY + PHONE_DESC_AMY + EMAIL_DESC_AMY + TAG_DESC_HUSBAND,
                 new AddCommand(expectedPerson));
     }
 
@@ -160,7 +160,7 @@ public class AddCommandParserTest {
                 + INVALID_TAG_DESC + VALID_SUB_FRIEND, Tag.MESSAGE_CONSTRAINTS);
 
         // two invalid values, only first invalid value reported
-        assertParseFailure(parser, INVALID_NAME_DESC + PHONE_DESC_BOB + EMAIL_DESC_BOB,
+        assertParseFailure(parser, INVALID_NAME_DESC + PHONE_DESC_BOB + EMAIL_DESC_BOB + TAG_DESC_HUSBAND,
                 Name.MESSAGE_CONSTRAINTS);
 
         // non-empty preamble
