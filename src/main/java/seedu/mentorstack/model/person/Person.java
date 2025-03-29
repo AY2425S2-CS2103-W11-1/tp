@@ -185,5 +185,4 @@ public class Person {
         return new Person(this.name, this.gender, this.phone, this.email,
                 this.subject, this.finishedSubject, this.isArchived, false);
     }
-
 }

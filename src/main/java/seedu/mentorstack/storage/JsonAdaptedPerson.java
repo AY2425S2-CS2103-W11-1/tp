@@ -33,6 +33,7 @@ class JsonAdaptedPerson {
     private final List<JsonAdaptedSubject> finishedSubject = new ArrayList<>();
     private final String isArchived;
     private final boolean isMarked;
+    private final String remark;
 
     /**
      * Constructs a {@code JsonAdaptedPerson} with the given person details.
@@ -42,7 +43,8 @@ class JsonAdaptedPerson {
                              @JsonProperty("gender") String gender,
                              @JsonProperty("phone") String phone,
                              @JsonProperty("email") String email,
-                             @JsonProperty("subject") List<JsonAdaptedSubject> subject) {
+                             @JsonProperty("subject") List<JsonAdaptedSubject> subject,
+                             @JsonProperty("remark") String remark) {
         this.name = name;
         this.gender = gender;
         this.phone = phone;
@@ -52,6 +54,7 @@ class JsonAdaptedPerson {
         }
         this.isArchived = "false";
         this.isMarked = false;
+        this.remark = remark;
     }
 
     /**
@@ -70,6 +73,7 @@ class JsonAdaptedPerson {
                 .collect(Collectors.toList()));
         isArchived = source.getIsArchived().getStatus();
         isMarked = source.getIsMarked();
+        remark = "";
     }
 
     /**

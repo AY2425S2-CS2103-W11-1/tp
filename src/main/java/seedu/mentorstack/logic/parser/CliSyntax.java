@@ -13,5 +13,6 @@ public class CliSyntax {
     public static final Prefix PREFIX_SUBJECT = new Prefix("s/");
     public static final Prefix PREFIX_FILTER_TYPE = new Prefix("f/");
     public static final Prefix PREFIX_FILTER_VALUE = new Prefix("v/");
+    public static final Prefix PREFIX_REMARK = new Prefix("r/");
 
 }
