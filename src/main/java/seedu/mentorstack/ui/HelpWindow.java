@@ -5,6 +5,8 @@ import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TitledPane;
 import javafx.scene.input.Clipboard;
 import javafx.scene.input.ClipboardContent;
 import javafx.stage.Stage;
@@ -27,6 +29,30 @@ public class HelpWindow extends UiPart<Stage> {
     @FXML
     private Label helpMessage;
 
+    @FXML
+    private TitledPane commandExamplesPane;
+
+    @FXML
+    private TextArea addHelp;
+
+    @FXML
+    private TextArea deleteHelp;
+
+    @FXML
+    private TextArea archiveHelp;
+
+    @FXML
+    private TextArea editHelp;
+
+    @FXML
+    private TextArea findHelp;
+
+    @FXML
+    private TextArea viewHelp;
+
+    @FXML
+    private TextArea statsHelp;
+
     /**
      * Creates a new HelpWindow.
      *
@@ -35,7 +61,69 @@ public class HelpWindow extends UiPart<Stage> {
     public HelpWindow(Stage root) {
         super(FXML, root);
         helpMessage.setText(HELP_MESSAGE);
+        addHelp.setText("""
+            add: Adds a student to Mentorstack.
+
+            Parameters: n/NAME g/GENDER p/PHONE e/EMAIL s/SUBJECT...
+
+            Example:
+            add n/John Doe g/M p/98765432 e/johndoe@email.com
+            s/CS2103 s/CS2101
+            """);
+
+        deleteHelp.setText("""
+            delete: Deletes the students identified by the index number
+            used in the displayed student list.
+
+            Parameters:
+            INDEX... (must be a positive integer)
+
+            Example:
+            delete 1 2
+            """);
+
+        archiveHelp.setText("""
+            
+            """);
+
+        editHelp.setText("""
+            
+            """);
+
+        findHelp.setText("""
+            
+            """);
+
+        viewHelp.setText("""
+           
+            """);
+
+        statsHelp.setText("""
+            stats: Shows for the gender distribution of the students.
+
+            Parameters:
+            [s/SUBJECT]
+
+            Example:
+            stats (this will show the gender distribution of all students.)
+            
+            stats s/CS2103
+            """);
+
+        root.setMinWidth(600);
+        root.setMinHeight(100);
+        root.setWidth(600);
+        root.setResizable(true);
+
+        commandExamplesPane.expandedProperty().addListener((obs, wasExpanded, isNowExpanded) -> {
+            if (isNowExpanded) {
+                getRoot().setHeight(500);
+            } else {
+                getRoot().setHeight(300);
+            }
+        });
     }
+
 
     /**
      * Creates a new HelpWindow.
@@ -46,21 +134,21 @@ public class HelpWindow extends UiPart<Stage> {
 
     /**
      * Shows the help window.
-     * @throws IllegalStateException
-     *     <ul>
-     *         <li>
-     *             if this method is called on a thread other than the JavaFX Application Thread.
-     *         </li>
-     *         <li>
-     *             if this method is called during animation or layout processing.
-     *         </li>
-     *         <li>
-     *             if this method is called on the primary stage.
-     *         </li>
-     *         <li>
-     *             if {@code dialogStage} is already showing.
-     *         </li>
-     *     </ul>
+     *
+     * @throws IllegalStateException <ul>
+     *                               <li>
+     *                               if this method is called on a thread other than the JavaFX Application Thread.
+     *                               </li>
+     *                               <li>
+     *                               if this method is called during animation or layout processing.
+     *                               </li>
+     *                               <li>
+     *                               if this method is called on the primary stage.
+     *                               </li>
+     *                               <li>
+     *                               if {@code dialogStage} is already showing.
+     *                               </li>
+     *                               </ul>
      */
     public void show() {
         logger.fine("Showing help page about the application.");
