@@ -83,19 +83,19 @@ public class HelpWindow extends UiPart<Stage> {
             """);
 
         archiveHelp.setText("""
-            
+            texts
             """);
 
         editHelp.setText("""
-            
+            texts
             """);
 
         findHelp.setText("""
-            
+            texts
             """);
 
         viewHelp.setText("""
-           
+            texts
             """);
 
         statsHelp.setText("""
@@ -106,7 +106,6 @@ public class HelpWindow extends UiPart<Stage> {
 
             Example:
             stats (this will show the gender distribution of all students.)
-            
             stats s/CS2103
             """);
 
