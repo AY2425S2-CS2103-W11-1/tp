@@ -7,7 +7,6 @@ import java.util.stream.Stream;
 
 import seedu.mentorstack.logic.commands.StatsCommand;
 import seedu.mentorstack.logic.parser.exceptions.ParseException;
-import seedu.mentorstack.logic.parser.exceptions.ParseWithHintException;
 import seedu.mentorstack.model.person.Subject;
 
 /**
@@ -15,10 +14,10 @@ import seedu.mentorstack.model.person.Subject;
  * and returns a StatsCommand object for execution.
  * @throws ParseException if the user input does not conform the expected format
  */
-public class StatsCommandParser extends CommandParser implements Parser<StatsCommand> {
+public class StatsCommandParser implements Parser<StatsCommand> {
 
     @Override
-    public StatsCommand parse(String args) throws ParseException, ParseWithHintException {
+    public StatsCommand parse(String args) throws ParseException {
         String trimmedArgs = args.trim();
         if (trimmedArgs.isEmpty()) {
             return new StatsCommand();
@@ -29,22 +28,13 @@ public class StatsCommandParser extends CommandParser implements Parser<StatsCom
 
         if (!arePrefixesPresent(argMultimap, PREFIX_SUBJECT)
                 || !argMultimap.getPreamble().isEmpty()) {
-            throw new ParseWithHintException(String.format(
-                MESSAGE_INVALID_COMMAND_FORMAT,
-                StatsCommand.MESSAGE_USAGE),
-                "s/[SUBJECT]"
-            );
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, StatsCommand.MESSAGE_USAGE));
         }
         Subject subject;
         try {
             subject = ParserUtil.parseSubjects(argMultimap.getValue(PREFIX_SUBJECT).get());
         } catch (ParseException pe) {
-            throw new ParseWithHintException(String.format(
-                MESSAGE_INVALID_COMMAND_FORMAT,
-                StatsCommand.MESSAGE_USAGE),
-                pe,
-                "[SUBJECT]"
-            );
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, StatsCommand.MESSAGE_USAGE), pe);
         }
 
         argMultimap.verifyNoDuplicatePrefixesFor(PREFIX_SUBJECT);

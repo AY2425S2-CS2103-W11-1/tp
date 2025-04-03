@@ -11,20 +11,19 @@ import java.util.Set;
 import seedu.mentorstack.commons.core.index.Index;
 import seedu.mentorstack.logic.commands.FinishCommand;
 import seedu.mentorstack.logic.parser.exceptions.ParseException;
-import seedu.mentorstack.logic.parser.exceptions.ParseWithHintException;
 import seedu.mentorstack.model.person.Subject;
 
 /**
  * Parses input arguments and creates a new FinishCommand object
  */
-public class FinishCommandParser extends CommandParser implements Parser<FinishCommand> {
+public class FinishCommandParser implements Parser<FinishCommand> {
 
     /**
      * Parses the given {@code String} of arguments in the context of the FinishCommand
      * and returns an FinishCommand object for execution.
      * @throws ParseException if the user input does not conform the expected format
      */
-    public FinishCommand parse(String args) throws ParseException, ParseWithHintException {
+    public FinishCommand parse(String args) throws ParseException {
         requireNonNull(args);
         ArgumentMultimap argMultimap =
                 ArgumentTokenizer.tokenize(args, PREFIX_SUBJECT);
@@ -34,19 +33,11 @@ public class FinishCommandParser extends CommandParser implements Parser<FinishC
         try {
             index = ParserUtil.parseIndex(argMultimap.getPreamble());
         } catch (ParseException pe) {
-            throw new ParseWithHintException(String.format(
-                MESSAGE_INVALID_COMMAND_FORMAT,
-                FinishCommand.MESSAGE_USAGE),
-                pe,
-                "INDEX [s/SUBJECT] [s/SUBJECT]"
-            );
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, FinishCommand.MESSAGE_USAGE), pe);
         }
 
         Set<Subject> subjectsToFinish = parseSubjectsForFinish(argMultimap.getAllValues(PREFIX_SUBJECT))
-                .orElseThrow(() -> new ParseWithHintException(
-                    FinishCommand.MESSAGE_NO_SUBJECTS,
-                    "[s/SUBJECT] [s/SUBJECT]"
-                ));
+                .orElseThrow(() -> new ParseException(FinishCommand.MESSAGE_NO_SUBJECTS));
 
         return new FinishCommand(index, subjectsToFinish);
     }

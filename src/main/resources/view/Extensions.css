@@ -1,12 +1,11 @@
+
 .error {
-    -fx-text-fill: rgba(169, 169, 169, 0.6); /* Grey color with opacity (semi-transparent) */
-    -fx-font-style: italic; /* Italicized text */
-    -fx-opacity: 0.6; /* Lower opacity for a subtle hint */
+    -fx-text-fill: #d06651 !important; /* The error class should always override the default text-fill style */
 }
 
 .list-cell:empty {
     /* Empty cells will not have alternating colours */
-    -fx-background: -large-theme;
+    -fx-background: #383838;
 }
 
 .tag-selector {
