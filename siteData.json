@@ -63,8 +63,18 @@
         "glossary": "Glossary",
         "appendix-instructions-for-manual-testing": "Appendix: Instructions for manual testing",
         "launch-and-shutdown": "Launch and shutdown",
+        "adding-a-person": "Adding a person",
         "deleting-a-person": "Deleting a person",
-        "saving-data": "Saving data"
+        "editing-a-person": "Editing a person",
+        "finding-a-person": "Finding a person",
+        "filtering-a-person-by-view": "Filtering a person by view",
+        "archiving-a-person": "Archiving a person",
+        "unarchiving-a-person": "Unarchiving a person",
+        "marking-a-person": "Marking a person",
+        "unmarking-a-person": "Unmarking a person",
+        "mark-a-student-s-subject-as-finished": "Mark a student's subject as finished",
+        "mark-a-student-s-subject-as-unfinished": "Mark a student's subject as unfinished",
+        "undo": "Undo"
       },
       "headingKeywords": {}
     },
