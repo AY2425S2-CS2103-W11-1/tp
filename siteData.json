@@ -51,7 +51,7 @@
         "storage-component": "Storage component",
         "common-classes": "Common classes",
         "implementation": "Implementation",
-        "undo-redo-feature": "Undo/redo feature",
+        "undo-feature": "Undo feature",
         "stats-feature": "Stats feature",
         "student-archiving": "Student archiving",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
