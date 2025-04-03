@@ -242,7 +242,7 @@ with(this){return _c('p',[_c('strong',[_v("Use case: UC01 - Add student details"
 with(this){return _c('p',[_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_c('p',[_v("Tutor requests to add a new student")])]),_v(" "),_c('li',[_c('p',[_v("System displays the required input format to add student information")])]),_v(" "),_c('li',[_c('p',[_v("Tutor enters student's information")])]),_v(" "),_c('li',[_c('p',[_v("System creates a new student profile")]),_v(" "),_c('p',[_v("Use case ends.")])])])}
+with(this){return _c('ol',[_c('li',[_c('p',[_v("Tutor requests to add a new student.")])]),_v(" "),_c('li',[_c('p',[_v("System displays the required input format to add student information.")])]),_v(" "),_c('li',[_c('p',[_v("Tutor enters student's information.")])]),_v(" "),_c('li',[_c('p',[_v("System creates a new student profile.")]),_v(" "),_c('p',[_v("Use case ends.")])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
@@ -257,7 +257,7 @@ with(this){return _c('p',[_c('strong',[_v("Use case: UC02 - Delete a student")])
 with(this){return _c('p',[_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_c('p',[_v("Tutor requests to list students")])]),_v(" "),_c('li',[_c('p',[_v("System shows a list of students")])]),_v(" "),_c('li',[_c('p',[_v("Tutor requests to delete a specific student in the list")])]),_v(" "),_c('li',[_c('p',[_v("System deletes the person")]),_v(" "),_c('p',[_v("Use case ends.")])])])}
+with(this){return _c('ol',[_c('li',[_c('p',[_v("Tutor requests to list students.")])]),_v(" "),_c('li',[_c('p',[_v("System shows a list of students.")])]),_v(" "),_c('li',[_c('p',[_v("Tutor requests to delete a specific student in the list.")])]),_v(" "),_c('li',[_c('p',[_v("System deletes the person.")]),_v(" "),_c('p',[_v("Use case ends.")])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: UC03 - Edit student details")])])}
@@ -266,7 +266,7 @@ with(this){return _c('p',[_c('strong',[_v("Use case: UC03 - Edit student details
 with(this){return _c('p',[_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_c('p',[_v("User inputs the student ID and the updated information of the corresponding student")])]),_v(" "),_c('li',[_c('p',[_v("Mentorstack shows a message of successful updating")]),_v(" "),_c('p',[_v("Use case ends.")])])])}
+with(this){return _c('ol',[_c('li',[_c('p',[_v("User inputs the student ID and the updated information of the corresponding student.")])]),_v(" "),_c('li',[_c('p',[_v("Mentorstack shows a message of successful updating.")]),_v(" "),_c('p',[_v("Use case ends.")])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
@@ -281,13 +281,13 @@ with(this){return _c('p',[_c('strong',[_v("Use case: UC04 - Search for students"
 with(this){return _c('p',[_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_c('p',[_v("User inputs the search key")])]),_v(" "),_c('li',[_c('p',[_v("Mentorstack shows a list of students that match the search key and are ready to further commands")]),_v(" "),_c('p',[_v("Use case ends.")])])])}
+with(this){return _c('ol',[_c('li',[_c('p',[_v("User inputs the search key.")])]),_v(" "),_c('li',[_c('p',[_v("Mentorstack shows a list of students that match the search key and are ready to further commands.")]),_v(" "),_c('p',[_v("Use case ends.")])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('p',[_v("2a. There is no matching student")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("2a1. Mentorstack shows an error message.")]),_v(" "),_c('p',[_v("Use case ends.")])])])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_v("2a. There is no matching student.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("2a1. Mentorstack shows an error message.")]),_v(" "),_c('p',[_v("Use case ends.")])])])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: UC05 - View all students’ information by filter")])])}
@@ -317,7 +317,7 @@ with(this){return _c('ol',[_c('li',[_c('p',[_v("Tutor enters the stats command w
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('p',[_v("1a. The filter or value is invalid.")]),_v(" "),_c('ul',[_c('li',[_v("1a1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])]),_v(" "),_c('li',[_c('p',[_v("1b. No subject input")]),_v(" "),_c('ul',[_c('li',[_v("1b1. Take the filter criteria as the whole data set\nBack to step 2")])])]),_v(" "),_c('li',[_c('p',[_v("2a. The list is empty.")]),_v(" "),_c('ul',[_c('li',[_v("2a1. Mentorstack shows a message indicating no student satisfies the input requirements.")])]),_v(" "),_c('p',[_v("Use case ends.")])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_v("1a. The filter or value is invalid.")]),_v(" "),_c('ul',[_c('li',[_v("1a1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])]),_v(" "),_c('li',[_c('p',[_v("1b. No subject input.")]),_v(" "),_c('ul',[_c('li',[_v("1b1. Take the filter criteria as the whole data set.\nBack to step 2")])])]),_v(" "),_c('li',[_c('p',[_v("2a. The list is empty.")]),_v(" "),_c('ul',[_c('li',[_v("2a1. Mentorstack shows a message indicating no student satisfies the input requirements.")])]),_v(" "),_c('p',[_v("Use case ends.")])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: UC07 - Archive students")])])}
@@ -416,7 +416,7 @@ with(this){return _c('ol',[_c('li',[_v("Tutor requests to indicate a student's s
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('p',[_v("2a. Student is not in the list.")]),_v(" "),_c('ul',[_c('li',[_v("2a1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])]),_v(" "),_c('li',[_c('p',[_v("2b. Student is archived.")]),_v(" "),_c('ul',[_c('li',[_v("2b1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])]),_v(" "),_c('li',[_c('p',[_v("2c. Student is not enrolled in the subject")]),_v(" "),_c('ul',[_c('li',[_v("2c1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_v("2a. Student is not in the list.")]),_v(" "),_c('ul',[_c('li',[_v("2a1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])]),_v(" "),_c('li',[_c('p',[_v("2b. Student is archived.")]),_v(" "),_c('ul',[_c('li',[_v("2b1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])]),_v(" "),_c('li',[_c('p',[_v("2c. Student is not enrolled in the subject.")]),_v(" "),_c('ul',[_c('li',[_v("2c1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: UC14 - Undo an unintended operation")])])}
@@ -536,6 +536,6 @@ with(this){return _c('h3',{attrs:{"id":"undo"}},[_v("Undo"),_c('a',{staticClass:
 with(this){return _c('ol',[_c('li',[_c('p',[_v("Undoes the previous state-changing command in Mentorstack.")]),_v(" "),_c('ol',[_c('li',[_c('p',[_v("Prerequisites: Valid commands have been run that have changed the state of Mentorstack in the current session.")])]),_v(" "),_c('li',[_c('p',[_v("Test case: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("undo")]),_c('br'),_v("\nExpected: Undoes the previous state-changing command. Mentorstack is restored to the previous state.")])]),_v(" "),_c('li',[_c('p',[_v("Prerequisites: New Mentorstack session.")])]),_v(" "),_c('li',[_c('p',[_v("Test case: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("undo")]),_c('br'),_v("\nExpected: No operation undone. Error details shown in the status message.")])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Thu, 3 Apr 2025, 23:08:45 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Thu, 3 Apr 2025, 23:20:57 GMT+8]")])])])}
 }];
   
