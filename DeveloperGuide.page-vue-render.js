@@ -275,13 +275,13 @@ with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 with(this){return _c('ul',[_c('li',[_c('p',[_v("2a. The given student ID is invalid.")]),_v(" "),_c('ul',[_c('li',[_c('p',[_v("2a1. Mentorstack shows an error message.")]),_v(" "),_c('p',[_v("Use case ends.")])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_c('strong',[_v("Use case: UC04 - Search for students")])])}
+with(this){return _c('p',[_c('strong',[_v("Use case: UC04 - Find students by name")])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_c('p',[_v("User inputs the search key.")])]),_v(" "),_c('li',[_c('p',[_v("Mentorstack shows a list of students that match the search key and are ready to further commands.")]),_v(" "),_c('p',[_v("Use case ends.")])])])}
+with(this){return _c('ol',[_c('li',[_c('p',[_v("User inputs a string.")])]),_v(" "),_c('li',[_c('p',[_v("Mentorstack shows a list of students that contains the string in the name.")]),_v(" "),_c('p',[_v("Use case ends.")])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
@@ -332,13 +332,13 @@ with(this){return _c('ol',[_c('li',[_v("Tutor requests to archive a list of stud
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('p',[_v("2a. Students is not in the list.")]),_v(" "),_c('ul',[_c('li',[_v("2a1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])]),_v(" "),_c('li',[_c('p',[_v("2b. A student is already archived.")]),_v(" "),_c('ul',[_c('li',[_v("2b1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_v("2a. Students are not in the list.")]),_v(" "),_c('ul',[_c('li',[_v("2a1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])]),_v(" "),_c('li',[_c('p',[_v("2b. A student is already archived.")]),_v(" "),_c('ul',[_c('li',[_v("2b1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: UC08 - Unarchive students")])])}
 },function anonymous(
 ) {
-with(this){return _c('p',[_c('strong',[_v("MSS")])])}
+with(this){return _c('p',[_v("Preconditions: User is accessing the archive list and there are archived students.\n"),_c('strong',[_v("MSS")])])}
 },function anonymous(
 ) {
 with(this){return _c('ol',[_c('li',[_v("Tutor requests to unarchive a list of students.")]),_v(" "),_c('li',[_v("Mentorstack unarchives the corresponding students.")])])}
@@ -347,7 +347,7 @@ with(this){return _c('ol',[_c('li',[_v("Tutor requests to unarchive a list of st
 with(this){return _c('p',[_c('strong',[_v("Extensions")])])}
 },function anonymous(
 ) {
-with(this){return _c('ul',[_c('li',[_c('p',[_v("2a. Students is not in the list.")]),_v(" "),_c('ul',[_c('li',[_v("2a1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])]),_v(" "),_c('li',[_c('p',[_v("2b. A student is already unarchived.")]),_v(" "),_c('ul',[_c('li',[_v("2b1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])])])}
+with(this){return _c('ul',[_c('li',[_c('p',[_v("2a. Students are not in the list.")]),_v(" "),_c('ul',[_c('li',[_v("2a1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])]),_v(" "),_c('li',[_c('p',[_v("2b. A student is already unarchived.")]),_v(" "),_c('ul',[_c('li',[_v("2b1. Mentorstack shows an error message.")])]),_v(" "),_c('p',[_v("Use case ends.")])])])}
 },function anonymous(
 ) {
 with(this){return _c('p',[_c('strong',[_v("Use case: UC09 - Show all archived students")])])}
@@ -533,9 +533,9 @@ with(this){return _c('ol',[_c('li',[_c('p',[_v("Marks a student's subject as unf
 with(this){return _c('h3',{attrs:{"id":"undo"}},[_v("Undo"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#undo","onclick":"event.stopPropagation()"}})])}
 },function anonymous(
 ) {
-with(this){return _c('ol',[_c('li',[_c('p',[_v("Undoes the previous state-changing command in Mentorstack successfully.")]),_v(" "),_c('ol',[_c('li',[_c('p',[_v("Prerequisites: Valid commands have been run that have changed the state of Mentorstack in the current session.")])]),_v(" "),_c('li',[_c('p',[_v("Test case: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("undo")]),_c('br'),_v("\nExpected: Undoes the previous state-changing command. Mentorstack is restored to the previous state.")])])])]),_v(" "),_c('li',[_c('p',[_v("Fails to undo the commands in Mentorstack.")]),_v(" "),_c('ol',[_c('li',[_c('p',[_v("Prerequisites: New Mentorstack session.")])]),_v(" "),_c('li',[_c('p',[_v("Test case: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("undo")]),_c('br'),_v("\nExpected: No operation undone. Error details shown in the status message.")])])])])])}
+with(this){return _c('ol',[_c('li',[_c('p',[_v("Undoes the previous state-changing command in Mentorstack successfully.")]),_v(" "),_c('ol',[_c('li',[_c('p',[_v("Prerequisites: Valid commands have been run that have changed the state of Mentorstack in the current session.")]),_v(" "),_c('ol',[_c('li',[_v("Test case: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("undo")]),_c('br'),_v("\nExpected: Undoes the previous state-changing command. Mentorstack is restored to the previous state.")])])])])]),_v(" "),_c('li',[_c('p',[_v("Fails to undo the commands in Mentorstack.")]),_v(" "),_c('ol',[_c('li',[_c('p',[_v("Prerequisites: New Mentorstack session.")]),_v(" "),_c('ol',[_c('li',[_v("Test case: "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("undo")]),_c('br'),_v("\nExpected: No operation undone. Error details shown in the status message.")])])])])])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Sat, 5 Apr 2025, 21:07:25 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.6.0")]),_v(", generated on Mon, 7 Apr 2025, 21:17:58 GMT+8]")])])])}
 }];
   
