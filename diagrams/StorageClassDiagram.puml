@@ -19,6 +19,7 @@ Class "<<interface>>\nMentorstackStorage" as MentorstackStorage
 Class JsonMentorstackStorage
 Class JsonSerializableMentorstack
 Class JsonAdaptedPerson
+Class JsonAdaptedSubject
 }
 
 }
@@ -37,5 +38,6 @@ JsonUserPrefsStorage .up.|> UserPrefsStorage
 JsonMentorstackStorage .up.|> MentorstackStorage
 JsonMentorstackStorage ..> JsonSerializableMentorstack
 JsonSerializableMentorstack --> "*" JsonAdaptedPerson
+JsonAdaptedPerson --> "*" JsonAdaptedSubject
 
 @enduml
